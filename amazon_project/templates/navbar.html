@@ -1,30 +1,113 @@
 {% load static %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Amazon</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
+<!-- DARK BACKGROUND (shows when menu opens) -->
+<div class="overlay" id="overlay"></div>
 
-<body>
+<!-- SIDE MENU (opens when you click All) -->
+<div class="side-menu" id="sideMenu">
 
+    <div class="side-menu-header">
+        <span>👤 Hello, sign in</span>
+        <button id="closeBtn">×</button>
+    </div>
+
+    <div class="side-menu-content">
+
+        <h2>Trending</h2>
+        <p>Bestsellers</p>
+        <p>New Releases</p>
+        <hr>
+
+        <h2>Digital Content and Devices</h2>
+        <p>Echo & Alexa <span>›</span></p>
+        <p>Fire TV <span>›</span></p>
+        <p>Kindle E-Readers & eBooks <span>›</span></p>
+        <p>Audible Audiobooks <span>›</span></p>
+        <p>Amazon Prime Video <span>›</span></p>
+        <p>Amazon Music <span>›</span></p>
+        <hr>
+
+        <h2>Shop by Category</h2>
+        <p>Mobiles, Computers <span>›</span></p>
+        <p>TV, Appliances, Electronics <span>›</span></p>
+        <p>Men's Fashion <span>›</span></p>
+        <p>Women's Fashion <span>›</span></p>
+        <p>See all <span>⌄</span></p>
+        <hr>
+
+        <h2>Programs & Features</h2>
+        <p>Gift Cards & Mobile Recharges <span>›</span></p>
+        <p>Amazon Launchpad</p>
+
+    </div>
+</div>
+
+
+<!-- MAIN HEADER -->
 <div class="navbar">
 
     <div class="logo">
-        <img src="{% static 'images/logo.png' %}">
+        <img src="{% static 'images/logo.png' %}" alt="Amazon">
     </div>
 
     <div class="location">
         <span class="location-icon">📍</span>
-
         <div>
-            <small>Delivering to Sonipat 131001</small>
+            <small>Delivering to Sonipat 131021</small>
             <strong>Update location</strong>
         </div>
     </div>
 
+    <div class="search-bar">
+        <select>
+            <option>All</option>
+            <option>Books</option>
+            <option>Electronics</option>
+        </select>
+        <input type="text" placeholder="Search Amazon.in">
+        <button>🔍</button>
+    </div>
+
+    <div class="language">
+        <span>🇮🇳</span> <strong>EN</strong> <span>▼</span>
+    </div>
+
+    <div class="account">
+        <small>Hello, sign in</small>
+        <strong>Account & Lists ▼</strong>
+    </div>
+
+    <div class="returns">
+        <small>Returns</small>
+        <strong>& Orders</strong>
+    </div>
+
+    <div class="cart">
+        <span class="cart-icon">🛒</span>
+        <strong>0 Cart</strong>
+    </div>
+
 </div>
 
-</body>
-</html>
+
+<!-- SECOND HEADER LINE -->
+<div class="amazon-subnav">
+
+    <div class="subnav-all" id="allBtn">
+        <span class="hamburger">☰</span>
+        <span>All</span>
+    </div>
+
+    <div class="subnav-item">Fresh <span class="arrow">▼</span></div>
+    <div class="subnav-item">Amazon Pay</div>
+    <div class="subnav-item">Mobiles</div>
+    <div class="subnav-item">Today's Deals</div>
+    <div class="subnav-item">Coupons</div>
+    <div class="subnav-item">Flights</div>
+    <div class="subnav-item">Electronics</div>
+    <div class="subnav-item">Computers</div>
+    <div class="subnav-item">New Releases</div>
+    <div class="subnav-item">Bestsellers</div>
+    <div class="subnav-item">Fashion</div>
+
+</div>

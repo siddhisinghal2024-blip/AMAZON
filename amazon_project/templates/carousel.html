@@ -1,0 +1,17 @@
+<div class="carousel">
+
+    <button class="carousel-btn left" id="prevBtn">❮</button>
+
+    <div class="carousel-track" id="carouselTrack">
+        {% for item in images %}
+        <div class="carousel-card">
+            <img src="{{ item.image_url }}?w=400&h=400&fit=crop" alt="{{ item.title }}">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.category }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <button class="carousel-btn right" id="nextBtn">❯</button>
+
+</div>
